@@ -1,4 +1,5 @@
 import "./styles.css";
+import { Homepage } from "./home.js";
 
-
-console.log("HALLO")
+const home = new Homepage();
+home.buildHome();
