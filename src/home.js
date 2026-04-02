@@ -7,6 +7,7 @@ export class Homepage {
     buildHome(){
         const container = document.querySelector(".main-content");
 
+        container.innerHTML = "";
         container.innerHTML = `${this.head} ${this.text}`;
     }
 }
