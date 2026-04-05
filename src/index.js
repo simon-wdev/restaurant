@@ -1,6 +1,8 @@
 import "./styles.css";
-import buildHomepage from "./home.js"
+import buildHomepage from "./home.js";
 import buildMenu from "./menu.js";
+import buildAbout from "./about.js";
+
 
 const container = document.querySelector(".main-content");
 
@@ -13,6 +15,7 @@ class Events{
     static listener(){
         const home = document.querySelector(".home");
         const menu = document.querySelector(".menu");
+        const about = document.querySelector(".about");
 
         home.addEventListener("click", function(){
             buildPage(buildHomepage);
@@ -20,6 +23,10 @@ class Events{
 
         menu.addEventListener("click", function(){
             buildPage(buildMenu);
+        })
+
+        about.addEventListener("click", function(){
+            buildPage(buildAbout);
         })
 
 
