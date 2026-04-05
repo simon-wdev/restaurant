@@ -1,19 +1,23 @@
 import "./styles.css";
-import { Homepage } from "./home.js";
+import buildHomepage from "./home.js"
 
+const container = document.querySelector(".main-content");
+
+function buildPage(buildFunction){
+    container.innerHTML = "";
+    container.appendChild(buildFunction());
+}
 
 class Events{
     static listener(){
         const home = document.querySelector(".home")
 
         home.addEventListener("click", function(){
-            home.buildHome();
+            buildHomepage();
         })
     }
 }
 
+buildPage(buildHomepage);
+Events.listener();
 
-
-
-const home = new Homepage();
-home.buildHome();
