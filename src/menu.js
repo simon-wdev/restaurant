@@ -1,30 +1,34 @@
 const dishes = [];
+const container = document.querySelector(".main-content")
 
 const dishCard = (name, description, price) => {
     return dishes.push({name, description, price});
 }
 
-const americanBurger = dishCard("American Burger", "A lot of fat and sugar.", 13.99)
-const phillyStack = dishCard("Classic Philly Stack", "CHEEEEEEEEEEEESE", 12.99)
-const cheeseClassic = dishCard("Cheeseburger", "All time Classic!", 10.99)
+const americanBurger = dishCard("The OG Burger", "80g saftiges Rindfleisch, Cheddar, knackiger Lollo Bionda, hausgemachte Pickles und unsere geheime Classic-Sauce.", "9.50€")
+const phillyStack = dishCard("BBQ Beast", "Rindfleisch trifft auf krossen Bacon, Röstzwiebeln und eine rauchige Whiskey-BBQ-Sauce. Nichts für schwache Nerven!", "11,50€")
+const cheeseClassic = dishCard("Green Garden (V)", "Hausgemachtes Kichererbsen-Walnuss-Patty mit Avocado-Creme, Grillpaprika und frischem Rucola.", "10,50€")
 
 export default function buildMenu(){
-    const wrapper = document.createElement("div");
+    const menuWrapper = document.createElement("div");
+    menuWrapper.classList.add("menu-wrapper")
+
 
     dishes.forEach((dish) => {
+        const dishCard = document.createElement("div");
         const name = document.createElement("h2");
-        name.textContent = dish.name;
-
         const description = document.createElement("p");
-        description.textContent = dish.description;
-
         const price = document.createElement("p");
+
+        dishCard.classList.add("dish-card");
+
+        name.textContent = dish.name;
+        description.textContent = dish.description;
         price.textContent = dish.price;
 
-        wrapper.append(name, description, price)
-
+        dishCard.append(name, description, price)
+        menuWrapper.append(dishCard);
     });
-
-    return wrapper;
+        return menuWrapper;
 }
 

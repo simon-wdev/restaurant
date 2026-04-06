@@ -28,8 +28,6 @@ class Events{
         about.addEventListener("click", function(){
             buildPage(buildAbout);
         })
-
-
     }
 }
 
