@@ -1,0 +1,33 @@
+:root{
+    --brown: #A47251;
+    --light-brown: #DD9E59;
+    --beige: #F0D8A1;
+    --mint: #DCF0C3;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding-top: 2%;
+    background-color: var(--beige);
+}
+
+button{
+    font-weight: bold;
+    font-size: 1.5em; 
+    color: white;
+    border: none;
+    background: none;
+    transition: background 0.3s ease;
+}
+
+button:hover{
+    color: grey;
+}
