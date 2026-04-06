@@ -11,8 +11,8 @@ description.textContent = "Rockin' burgers since 1989! We would love to serve yo
 const infoBox = document.createElement("div");
 
 
-function infoPairs(label, text){
-    const strong = document.createElement("strong");
+function infoPairs(label, text){                  
+    const strong = document.createElement("strong"); //strong ist ein neuer absatz, strong müsste innerhalb eine paragraph appended werden
     const p = document.createElement("p");
     strong.textContent = `${label}: `;
     p.textContent = text;

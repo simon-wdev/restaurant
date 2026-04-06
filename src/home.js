@@ -8,8 +8,8 @@ export default function buildHomepage(){
     let header = document.createElement("h1");
     let body = document.createElement("p");
 
-    header.textContent = "Welcome to our Restaurant!";
-    body.textContent = "Come to our restaurant and choose a variety of special Burgers!";
+    header.textContent = "The Patty Project";
+    body.textContent = "Vergiss labberige Mensa-Patties. Wir bringen das Grill-Feeling direkt in dein Viertel. Handgemacht, frisch und mit der Extraportion Liebe (und Käse) zubereitet. Dein Hunger hat endlich einen Endgegner gefunden!";
 
     wrapper.append(header, body);
     return wrapper
