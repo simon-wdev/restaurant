@@ -89,3 +89,32 @@ button:hover{
     text-align: right;
     font-weight: bold;
 }
+
+.about-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-wrapper p{
+    max-width: 50vw;
+}
+
+.info-wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 2px;
+    min-width: 30vw;
+}
+
+.info-row{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    min-width: 20vw;
+}
+
+.info-row p {
+    margin: 0;
+}
