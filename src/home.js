@@ -10,6 +10,7 @@ export default function buildHomepage(){
     const textContainer = document.createElement("div");
     const intro = document.createElement("p");
     const text = document.createElement("p");
+    const button = document.createElement("button")
 
     bodywrapper.classList.add("body-wrapper")
     textContainer.classList.add("text-container")
@@ -21,9 +22,9 @@ export default function buildHomepage(){
     header.textContent = "The Patty Project";
     intro.textContent = "Vergiss labberige Mensa-Patties. Wir bringen das Grill-Feeling direkt in dein Viertel. Handgemacht, frisch und mit der Extraportion Liebe (und Käse) zubereitet. Dein Hunger hat endlich einen Endgegner gefunden!";
     text.textContent = "Freu dich im 'Patty Project' auf reichlich Käse und frische Zutaten. Alle unsere Dip's sind Hausgemacht und frisch!"
+    button.textContent = "Zum Menü!"
 
-
-    textContainer.append(intro, text);
+    textContainer.append(intro, text, button);
     bodywrapper.append(img, textContainer)
     wrapper.append(header, bodywrapper);
     
