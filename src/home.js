@@ -15,6 +15,7 @@ export default function buildHomepage(){
     bodywrapper.classList.add("body-wrapper")
     textContainer.classList.add("text-container")
     wrapper.classList.add("home-wrapper")
+    button.classList.add("call-button")
     
     img.src = homeJpg;
     img.alt = "Frau die ein Tablett mit Burgern in der Hand hält."

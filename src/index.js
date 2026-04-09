@@ -16,6 +16,8 @@ class Events{
         const home = document.querySelector(".home");
         const menu = document.querySelector(".menu");
         const about = document.querySelector(".about");
+        const call = document.querySelector(".call-button")
+
 
         home.addEventListener("click", function(){
             buildPage(buildHomepage);
@@ -24,6 +26,13 @@ class Events{
         menu.addEventListener("click", function(){
             buildPage(buildMenu);
         })
+
+        container.addEventListener("click", function(e){
+            if (e.target.classList.contains("call-button")){
+                buildPage(buildMenu);
+            }
+        })
+
 
         about.addEventListener("click", function(){
             buildPage(buildAbout);
