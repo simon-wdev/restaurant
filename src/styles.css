@@ -73,8 +73,14 @@ button:hover{
 }
 
 .body-wrapper img{
+    max-width: 600px;
+    width: 90%;
+    min-width: 300px;
     border-radius: 8px;
     box-shadow: 2px 2px 5px black;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .text-container{
@@ -98,6 +104,9 @@ button:hover{
 
 .menu-wrapper{
     display:flex;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 0;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -106,14 +115,22 @@ button:hover{
 
 .menu-wrapper img{
     max-width: 300px;
+    width: 100%;
+    min-width: 150px;
     border-radius: 20%;
+    min-width: 100px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
 }
 
 .dish-card{
     display: flex;
     gap: 20px;
     border: black solid 2px;
-    width: 40%;
+    width: 90%;
+    max-width: 600px;
+    min-width: 300px;
     padding: 20px;
     border-radius: 10px;
     font-size: 1.3em;
@@ -134,7 +151,9 @@ button:hover{
 }
 
 .about-wrapper p{
-    max-width: 50vw;
+    max-width: 800px;
+    width: 90%;
+    min-width: 300px;
     line-height: 1.5;
 }
 
@@ -142,21 +161,64 @@ button:hover{
 .info-wrapper{
     display:flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     border: solid black 2px;
-    min-width: 30vw;
+    max-width: 600px;
+    width: 90%;
+    min-width: 200px;
     background-color: var(--mint);
     box-shadow: 2px 2px 10px black;
     margin-top: 2em;
+    padding: 10px;
 }
 
 .info-row{
     display: flex;
-    gap: 10px;
-    justify-content: space-around;
-    min-width: 20vw;
+    text-align: right;
 }
 
 .info-row p {
     margin: 0;
+}
+
+
+@media (max-width: 600px) {
+    .body-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .body-wrapper p{
+        width: 90%;
+        margin: 10px;
+    }
+
+    .text-container button{
+        align-self: center;
+        margin-bottom: 20px;
+    }
+
+    .dish-card {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+
+    .price {
+        text-align: center;   
+    }
+
+    .about-wrapper{
+        margin-bottom: 10px;
+    }
+
+    .info-row{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .info-row p {
+        text-align: center;
+    }
 }
