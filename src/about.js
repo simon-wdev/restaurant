@@ -7,11 +7,12 @@ header.style.fontWeight = "bold";
 
 const description = document.createElement("p");
 description.textContent = "Das Patty Project startete nicht in der Küche sondern als Fullstack Projekt. Zwischen normalem Schulwahnsinn" +
-                          " und der Liebe zu Burgern war es mein Traum verschiedene Zutaten in Module zu bündeln, sodass die Wartezeit für Kunden minimal bleibt." +
+                          " und der Liebe zu Burgern war es unser Traum verschiedene Zutaten in Module zu bündeln, sodass die Wartezeit für Kunden minimal bleibt." +
                           " Seit 2025 machen wir nun Burger im 'Webpack-Format' und freuen uns auf euren Besuch. Kommt doch mal vorbei!"
 
 const infoWrapper = document.createElement("div");
 infoWrapper.classList.add("info-wrapper");
+
 
 function infoPairs(label, text){
     const infoRow = document.createElement("div");                  
